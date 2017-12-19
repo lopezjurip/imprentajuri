@@ -18,18 +18,17 @@ function submitForm(){
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
 
-
     $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
+        url: "https://formspree.io/patricia@imprentajuri.cl",
+        method: "POST",
+        data: {
+            email: email,
+            message: message,
+            _subject: "Mensaje de " + name + " desde imprentajuri.cl"
+        },
+        dataType: "json",
         success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
+            formSuccess();
         }
     });
 }
@@ -37,12 +36,6 @@ function submitForm(){
 function formSuccess(){
     $("#contactForm")[0].reset();
     submitMSG(true, "Message Submitted!")
-}
-
-function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass();
-    });
 }
 
 function submitMSG(valid, msg){
