@@ -1,0 +1,18 @@
+{
+    "name": "Imprenta Juri",
+    "icons": [
+        {
+            "src": "/img/favicon/android-chrome-192x192.png?v1=9BybzW66Bp",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicon/android-chrome-384x384.png?v1=9BybzW66Bp",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#fbc700",
+    "background_color": "#fbc700",
+    "display": "standalone"
+}
