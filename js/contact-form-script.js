@@ -19,7 +19,7 @@ function submitForm() {
     var message = $("#message").val();
 
     $.ajax({
-        url: "https://formspree.io/patricia@imprentajuri.cl",
+        url: "https://formspree.io/patriciajuri@gmail.com",
         method: "POST",
         data: {
             email: email,
